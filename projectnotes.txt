@@ -1,0 +1,5 @@
+delete ordinal numbers in input files
+
+compare new file to old file, pull difs, format difs
+
+output file: D, F, I, K, N
