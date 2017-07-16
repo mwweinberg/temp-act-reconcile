@@ -3,10 +3,6 @@ import csv
 #creates the output list
 output_csv_list = []
 
-#open the output doc as writable
-
-output_csv = open("output.csv", "w")
-
 #turns csvs into lists of lists
 
 with open('old.csv', 'rU') as f:
@@ -47,4 +43,7 @@ for element in output_csv_list:
     element.insert(11, '')
     element.insert(12, '')
 
-#TODO: output to CSV
+#output to CSV
+with open('output.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerows(output_csv_list)
