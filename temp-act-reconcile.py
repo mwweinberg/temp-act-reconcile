@@ -8,7 +8,7 @@ output_csv_list = []
 with open('old.csv', 'rU') as f:
     reader = csv.reader(f)
     old_csv_list = list(list(rec) for rec in csv.reader(f, delimiter=','))
-    #removes the ordinals for each entry because they are not relevant
+    #removes the ordinals that start each entry because they are not relevant and change even if the data is the same
     for element in old_csv_list:
         del element[0]
     #print(old_csv_list)
