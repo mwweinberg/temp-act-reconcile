@@ -5,7 +5,7 @@ output_csv_list = []
 
 #open the output doc as writable
 
-ouput_csv = open("output.csv", "w")
+output_csv = open("output.csv", "w")
 
 #turns csvs into lists of lists
 
@@ -24,8 +24,6 @@ with open('new.csv', 'rU') as f:
         del element[0]
     #print(new_csv_list)
 
-
-# TODO: Compare new list to old list
 # if element is not in old list, add to output list
 
 for element in new_csv_list:
@@ -35,10 +33,18 @@ for element in new_csv_list:
         print('new entry')
         output_csv_list.append(element)
 
-print(output_csv_list)
+#Add spaces so the output is correctly formatted
 
-
-
-#TODO: Format output with spaces
+for element in output_csv_list:
+    #adds a blank entry to each of these spaces
+    element.insert(0, '')
+    element.insert(1, '')
+    element.insert(2, '')
+    element.insert(4, '')
+    element.insert(6, '')
+    element.insert(7, '')
+    element.insert(9, '')
+    element.insert(11, '')
+    element.insert(12, '')
 
 #TODO: output to CSV
